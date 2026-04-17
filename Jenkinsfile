@@ -45,4 +45,3 @@ pipeline {
     failure { echo 'Pipeline FAILED. Check the logs above.' }
     always  { sh 'docker logout' }
   }
-}
