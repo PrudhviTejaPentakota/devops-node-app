@@ -5,12 +5,6 @@ pipeline {
     DOCKER_TAG   = "${env.BUILD_NUMBER}"
     REGISTRY_CREDS = credentials('dockerhub-creds')
   }
-  stages {
-    stage('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/YOUR_USERNAME/devops-node-app.git'
-      }
-    }
     stage('Install Dependencies') {
       steps {
         sh 'npm install'
