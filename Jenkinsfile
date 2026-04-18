@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = 'YOUR_DOCKERHUB_USERNAME/devops-node-app'
+    DOCKER_IMAGE = 'prudhviteja6/devops-node-app'
     DOCKER_TAG   = "${env.BUILD_NUMBER}"
     REGISTRY_CREDS = credentials('dockerhub-creds')
   }
